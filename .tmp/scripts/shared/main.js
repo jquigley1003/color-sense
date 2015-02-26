@@ -5,7 +5,7 @@
       var $window;
       $window = $(window);
       $scope.main = {
-        brand: 'Color Sense',
+        brand: 'Slim',
         name: 'Lisa Doe'
       };
       $scope.pageTransitionOpts = [
@@ -25,10 +25,10 @@
       ];
       $scope.admin = {
         layout: 'wide',
-        menu: 'horizontal',
+        menu: 'vertical',
         fixedHeader: true,
         fixedSidebar: true,
-        pageTransition: $scope.pageTransitionOpts[3],
+        pageTransition: $scope.pageTransitionOpts[0],
         skin: '11'
       };
       $scope.$watch('admin', function(newVal, oldVal) {
@@ -78,3 +78,5 @@
   ]).controller('DashboardCtrl', ['$scope', function($scope) {}]);
 
 }).call(this);
+
+//# sourceMappingURL=main.js.map
