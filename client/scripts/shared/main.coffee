@@ -9,8 +9,8 @@ angular.module('app.controllers', [])
         $window = $(window)
 
         $scope.main =
-            brand: 'Slim'
-            name: 'Lisa Doe' # those which uses i18n directive can not be replaced for now.
+            brand: 'Color Sense'
+            name: 'Patricia Joe' # those which uses i18n directive can not be replaced for now.
 
 
         $scope.pageTransitionOpts = [
@@ -29,10 +29,10 @@ angular.module('app.controllers', [])
 
         $scope.admin =
             layout: 'wide'                                  # 'boxed', 'wide'
-            menu: 'vertical'                                # 'horizontal', 'vertical'
+            menu: 'horizontal'                                # 'horizontal', 'vertical'
             fixedHeader: true                               # true, false
             fixedSidebar: true                              # true, false
-            pageTransition: $scope.pageTransitionOpts[0]    # unlimited, check out "_animation.scss"
+            pageTransition: $scope.pageTransitionOpts[3]    # unlimited, check out "_animation.scss"
             skin: '11'                                      # 11,12,13,14,15,16; 21,22,23,24,25,26;; 31,32,33,34,35,36
 
         $scope.$watch('admin', (newVal, oldVal) ->

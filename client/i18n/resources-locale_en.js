@@ -59,7 +59,7 @@
     "lock screen": "",
     "invoice": "",
     "blank page": "",
-    "lisa doe": "",
+    "patricia joe": "",
     "inbox": "",
     "compose": "",
     "single mail": "",

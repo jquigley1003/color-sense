@@ -5,8 +5,8 @@
       var $window;
       $window = $(window);
       $scope.main = {
-        brand: 'Slim',
-        name: 'Lisa Doe'
+        brand: 'Color Sense',
+        name: 'Patricia Joe'
       };
       $scope.pageTransitionOpts = [
         {
@@ -25,11 +25,11 @@
       ];
       $scope.admin = {
         layout: 'wide',
-        menu: 'vertical',
+        menu: 'horizontal',
         fixedHeader: true,
         fixedSidebar: true,
-        pageTransition: $scope.pageTransitionOpts[0],
-        skin: '11'
+        pageTransition: $scope.pageTransitionOpts[3],
+        skin: '16'
       };
       $scope.$watch('admin', function(newVal, oldVal) {
         if (newVal.menu === 'horizontal' && oldVal.menu === 'vertical') {
@@ -78,5 +78,3 @@
   ]).controller('DashboardCtrl', ['$scope', function($scope) {}]);
 
 }).call(this);
-
-//# sourceMappingURL=main.js.map
