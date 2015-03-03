@@ -33,6 +33,6 @@
     "foobar": "^1.1.0"
   },
   "scripts": {
-  "start": "node server.js"
+  "start": "node app.coffee"
   }
 }
