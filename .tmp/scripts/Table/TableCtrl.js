@@ -178,3 +178,5 @@
   ]);
 
 }).call(this);
+
+//# sourceMappingURL=TableCtrl.js.map

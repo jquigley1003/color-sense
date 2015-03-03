@@ -29,7 +29,7 @@
         fixedHeader: true,
         fixedSidebar: true,
         pageTransition: $scope.pageTransitionOpts[3],
-        skin: '16'
+        skin: '11'
       };
       $scope.$watch('admin', function(newVal, oldVal) {
         if (newVal.menu === 'horizontal' && oldVal.menu === 'vertical') {
@@ -78,3 +78,5 @@
   ]).controller('DashboardCtrl', ['$scope', function($scope) {}]);
 
 }).call(this);
+
+//# sourceMappingURL=main.js.map
