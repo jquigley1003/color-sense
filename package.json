@@ -29,10 +29,7 @@
     "node": "0.10.32",
     "npm": "2.0.0"
   },
-  "dependencies": {
-    "foobar": "^1.1.0"
-  },
   "scripts": {
-  "start": "node index.js"
+  "start": "node app.js"
   }
 }
