@@ -30,6 +30,6 @@
     "npm": "2.0.0"
   },
   "scripts": {
-  "start": "node server.coffee"
+  "start": "node index.html"
   }
 }
