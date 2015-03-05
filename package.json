@@ -30,6 +30,9 @@
     "npm": "2.0.0"
   },
   "scripts": {
-  "start": "node index.html"
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "app.json": "^1.2.1"
   }
 }
