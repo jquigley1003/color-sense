@@ -1379,6 +1379,37 @@ rect {
   stroke-width: .1px;
 }
 
+/* START - HTML5 Canvas Hex/RGB Color Picker */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jeffquigley\/slim-v1\.2\.1\/slim\/client\/styles\/pages\/_pages\.scss}line{font-family:\0000349}}
+.hccp-outerdiv {
+  display: inline;
+  position: inherit;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jeffquigley\/slim-v1\.2\.1\/slim\/client\/styles\/pages\/_pages\.scss}line{font-family:\0000354}}
+.hccp-canvas {
+  float: left;
+  border: 1px solid #aaaaaa;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jeffquigley\/slim-v1\.2\.1\/slim\/client\/styles\/pages\/_pages\.scss}line{font-family:\0000359}}
+.hccp-innerdiv {
+  font-family: Courier,monospace;
+  float: left;
+  margin-left: 15px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jeffquigley\/slim-v1\.2\.1\/slim\/client\/styles\/pages\/_pages\.scss}line{font-family:\0000365}}
+.hccp-colorbar {
+  width: 150px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jeffquigley\/slim-v1\.2\.1\/slim\/client\/styles\/pages\/_pages\.scss}line{font-family:\0000369}}
+.hccp-resetdiv {
+  clear: both;
+}
+
+/* END - HTML5 Canvas Hex/RGB Color Picker */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/jeffquigley\/slim-v1\.2\.1\/slim\/client\/styles\/pages\/_err\.scss}line{font-family:\000032}}
 .body-err #content {
   background: url("../images/background/4.jpg") no-repeat center center fixed;

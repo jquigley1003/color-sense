@@ -1,10 +1,88 @@
 <div class="page">
 
     <section class="panel panel-default">
-        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Steps Will Go Here</strong></div>
-        <div class="col-lg-9">
+        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Step One Will Go Here</strong>        
+        </div>
+        <div class="col-lg-9" ng-show="myToggle">
           <img class="img-responsive" src="images/paint-colors.jpg" alt="" >
         </div>
+        <div class="col-lg-3" ng-show="myToggle">
+          <button ng-click="toggle()">Click Here To Begin</button>
+          <p>Start by choosing your desired colors</p>
+          <img class="img-responsive" src="images/color-wheel.png" alt="" >
+        </div>
+        <div ng-show="!myToggle">
+          <button ng-click="toggle()">Back to Step One Instructions</button>
+          <div class="hccp-outerdiv">
+            <canvas class="hccp-canvas" id="hccp-FindCanvasColor"></canvas>
+            <div class="hccp-innerdiv">
+            <br>
+            <p>On Hover <span id="hccp-hoverColorFont">Text Color</span></p>
+            <p class="hccp-colorbar" id="hccp-hoverColorBackground">Background Color</p>
+            <p>RGB: <input type="text" id="hccp-hoverColorRGB"></input></p>
+            <p>HEX: <input type="text" id="hccp-hoverColorHEX"></input></p>
+            <br>
+            <p>On Click <span id="hccp-clickColorFont">Text Color</span></p>
+            <p class="hccp-colorbar" id="hccp-clickColorBackground">Background Color</p>
+            <p>RGB: <input type="text" id="hccp-clickColorRGB"></input></p>
+            <p>HEX: <input type="text" id="hccp-clickColorHEX"></input></p>
+            </div>
+            <br>
+            <div class="hccp-resetdiv"></div>
+            </div>
+        </div>        
     </section> 
 
 </div>
+<script>
+// set initial variables and grab image
+
+var img = new Image();
+img.src = 'images/color-wheel.png';
+var canvas = document.getElementById('hccp-FindCanvasColor');
+var context = canvas.getContext('2d');
+
+// draw image onto HTML5 canvas
+img.onload = function() {
+  canvas.width = img.width;
+  canvas.height = img.height;
+  context.drawImage(img,0,0);
+};
+
+// convert individual RGB components
+function unitConversion(unit) {
+  var hexconv = unit.toString(16);
+  return hexconv.length == 1 ? '0' + hexconv : hexconv;
+}
+
+// convert RGB to Hex
+function RGBtoHex(r, g, b) {
+  return "#" + unitConversion(r) + unitConversion(g) + unitConversion(b);
+}
+
+// find pixel color value on jQuery mousemove or click event
+// use document.getElementById to return values to user and change CSS
+$('#hccp-FindCanvasColor').on('mousemove click', function(event){
+  
+  var x = event.pageX - canvas.offsetLeft;
+  var y = event.pageY - canvas.offsetTop;
+  var img_data = context.getImageData(x, y, 1, 1).data;
+  var R = img_data[0];
+  var G = img_data[1];
+  var B = img_data[2];
+  var rgb = 'rgb('+R+','+G+','+B+')';
+  var hex = RGBtoHex(R,G,B);
+  if(event.type=='mousemove') {
+    document.getElementById('hccp-hoverColorFont').style.color = hex;
+    document.getElementById('hccp-hoverColorBackground').style.backgroundColor = hex;
+    document.getElementById('hccp-hoverColorRGB').value = rgb;
+    document.getElementById('hccp-hoverColorHEX').value = hex;
+  } 
+  else if(event.type=='click') {
+    document.getElementById('hccp-clickColorFont').style.color = hex;
+    document.getElementById('hccp-clickColorBackground').style.backgroundColor = hex;
+    document.getElementById('hccp-clickColorRGB').value = rgb;
+    document.getElementById('hccp-clickColorHEX').value = hex;
+  }
+});
+</script>

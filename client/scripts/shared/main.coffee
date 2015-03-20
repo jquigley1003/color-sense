@@ -67,6 +67,12 @@ angular.module('app.controllers', [])
             warning:        '#EBCB8B'
             danger:         '#BF616A'
             gray:           '#DCDCDC'
+
+        $scope.myToggle = true
+
+        $scope.toggle = ->
+          $scope.myToggle = !$scope.myToggle
+          return
 ])
 
 .controller('HeaderCtrl', [

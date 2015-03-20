@@ -42,7 +42,7 @@ angular.module('app', [
             'tables/static', 'tables/dynamic', 'tables/responsive'
             'forms/elements', 'forms/layouts', 'forms/validation', 'forms/wizard'
             'charts/charts', 'charts/flot'
-            'pages/404', 'pages/500', 'pages/blank', 'pages/forgot-password', 'pages/invoice', 'pages/lock-screen', 'pages/profile', 'pages/invoice', 'pages/signin', 'pages/signup'
+            'pages/404', 'pages/500', 'pages/blank', 'pages/blank2', 'pages/blank3', 'pages/forgot-password', 'pages/invoice', 'pages/lock-screen', 'pages/profile', 'pages/invoice', 'pages/signin', 'pages/signup'
             'mail/compose', 'mail/inbox', 'mail/single'
             'tasks/tasks'
         ]

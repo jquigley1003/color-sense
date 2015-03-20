@@ -54,7 +54,7 @@
           $scope.admin.fixedSidebar = false;
         }
       }, true);
-      return $scope.color = {
+      $scope.color = {
         primary: '#5B90BF',
         success: '#A3BE8C',
         info: '#7FABD2',
@@ -62,6 +62,10 @@
         warning: '#EBCB8B',
         danger: '#BF616A',
         gray: '#DCDCDC'
+      };
+      $scope.myToggle = true;
+      return $scope.toggle = function() {
+        $scope.myToggle = !$scope.myToggle;
       };
     }
   ]).controller('HeaderCtrl', ['$scope', function($scope) {}]).controller('NavContainerCtrl', ['$scope', function($scope) {}]).controller('NavCtrl', [
